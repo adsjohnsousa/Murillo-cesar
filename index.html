@@ -162,10 +162,11 @@
     .section-label::after { right: 0; transform: scaleX(-1); }
 
 /* ── BUTTONS ── */
+/* ── BUTTONS ── */
 .btn-group {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 28px;
 }
 
@@ -174,44 +175,31 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 28px;
-  border-radius: 100px;
-  background: rgba(200,162,42,0.06);
-  border: 1px solid rgba(200,162,42,0.2);
-  color: var(--white);
+  border-radius: 4px;
+  border: none;
+  background: linear-gradient(90deg, #6B4E0A, #C8A22A, #F0D060, #C8A22A);
+  background-size: 200% auto;
+  color: #080705;
   text-decoration: none;
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 15px;
-  font-weight: 500;
-  letter-spacing: .1em;
+  font-weight: 600;
+  letter-spacing: .12em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all .3s ease;
-  position: relative;
-  overflow: hidden;
+  transition: background-position .4s ease, transform .2s ease, box-shadow .2s ease;
   animation: fadeUp 0.6s ease both;
 }
 
-.btn::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 100px;
-  background: linear-gradient(90deg, rgba(200,162,42,0.15), transparent);
-  opacity: 0;
-  transition: opacity .3s;
-}
-
 .btn:hover {
-  border-color: var(--gold);
-  background: rgba(200,162,42,0.12);
-  transform: scale(1.02);
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200,162,42,0.25);
 }
-
-.btn:hover::after { opacity: 1; }
 
 .btn .btn-icon {
   font-size: 16px;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: opacity .3s, transform .3s;
 }
 
@@ -221,27 +209,21 @@
 }
 
 .btn-gold {
-  border-color: rgba(200,162,42,0.5);
-  background: linear-gradient(90deg, rgba(200,162,42,0.14), rgba(200,162,42,0.04));
-}
-
-.btn-gold:hover {
-  border-color: var(--goldf);
-  background: linear-gradient(90deg, rgba(200,162,42,0.22), rgba(200,162,42,0.08));
+  background: linear-gradient(90deg, #3a2800, #C8A22A, #F0D060, #C8A22A);
+  background-size: 200% auto;
 }
 
 .btn-wa {
-  border-color: rgba(37,211,102,0.2);
-  background: rgba(37,211,102,0.04);
+  background: linear-gradient(90deg, #075e3a, #25D366, #6ef7a7, #25D366);
+  background-size: 200% auto;
+  color: #080705;
 }
 
 .btn-wa:hover {
-  border-color: rgba(37,211,102,0.5);
-  background: rgba(37,211,102,0.1);
-  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(37,211,102,0.2);
 }
 
-.btn-wa .btn-icon { color: #25D366; opacity: 1; }
+.btn-wa .btn-icon { opacity: 1; }
 
 .btn:nth-child(1) { animation-delay: 0.2s; }
 .btn:nth-child(2) { animation-delay: 0.3s; }
@@ -249,90 +231,6 @@
 .btn:nth-child(4) { animation-delay: 0.5s; }
 .btn:nth-child(5) { animation-delay: 0.6s; }
 .btn:nth-child(6) { animation-delay: 0.7s; }
-    .footer {
-      text-align: center;
-      margin-top: 48px;
-      animation: fadeUp 1s ease 0.8s both;
-    }
-
-    .footer .gold-line {
-      width: 32px;
-      height: 1px;
-      background: var(--gold);
-      margin: 0 auto 16px;
-    }
-
-    .footer p {
-      font-size: 11px;
-      letter-spacing: .14em;
-      color: var(--goldd);
-      text-transform: uppercase;
-    }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-
-    <!-- Foto -->
-    <div class="photo-wrap">
-      <div class="photo-ring">
-        <img src="murillo01.jpeg" alt="Prof. Dr. Murillo Cesar">
-      </div>
-    </div>
-
-    <!-- Header -->
-    <div class="header">
-      <p class="label">Professor &amp; Especialista em Concursos</p>
-      <h1>Murillo Cesar<span>Doutor em Letras</span></h1>
-      <div class="divider"></div>
-      <p class="bio">Português para Concursos Públicos.<br>Do Zero à Aprovação.</p>
-    </div>
-
-    <!-- Produtos -->
-    <p class="section-label">Produtos</p>
-    <div class="btn-group">
-      <a href="/leia-uma-vez-acerte-na-primeira" class="btn btn-gold">
-        <span>Leia uma vez, acerte na primeira</span>
-        <span class="btn-icon">→</span>
-      </a>
-      <a href="https://pay.hotmart.com/V105283042H" class="btn">
-        <span>Guia de Leitura Certeira</span>
-        <span class="btn-icon">→</span>
-      </a>
-         <a href="https://pay.hotmart.com/Y105365287Q" class="btn">
-        <span>Guia Estratégico das Bancas</span>
-        <span class="btn-icon">→</span>
-      </a>
-      <a href="/portugues-do-zero-a-aprovacao" class="btn">
-        <span>Português do Zero à Aprovação</span>
-        <span class="btn-icon">→</span>
-      </a>
-    </div>
-
-    <!-- WhatsApp -->
-    <p class="section-label">Fale Comigo</p>
-    <div class="btn-group">
-      <a href="https://wa.me/5573981120360?text=Ol%C3%A1%20professor%20Murillo%2C%20queria%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20mentoria%20individual" target="_blank" class="btn btn-wa">
-        <span>Mentoria Individual</span>
-        <span class="btn-icon">📲</span>
-      </a>
-      <a href="https://wa.me/5573981120360?text=Ol%C3%A1%20professor%20Murillo%2C%20estou%20com%20d%C3%BAvida%20sobre%20um%20de%20seus%20produtos" target="_blank" class="btn btn-wa">
-        <span>Suporte / Dúvidas</span>
-        <span class="btn-icon">📲</span>
-      </a>
-    </div>
-
     <!-- Footer -->
     <div class="footer">
       <div class="gold-line"></div>
