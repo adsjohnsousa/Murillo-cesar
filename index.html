@@ -161,97 +161,94 @@
     .section-label::before { left: 0; }
     .section-label::after { right: 0; transform: scaleX(-1); }
 
-    /* ── BUTTONS ── */
-    .btn-group {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
+/* ── BUTTONS ── */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
 
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 18px 24px;
-      border: 1px solid rgba(200,162,42,0.25);
-      border-radius: 4px;
-      background: rgba(200,162,42,0.04);
-      color: var(--white);
-      text-decoration: none;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all .25s ease;
-      position: relative;
-      overflow: hidden;
-      animation: fadeUp 0.6s ease both;
-    }
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  border-radius: 100px;
+  background: rgba(200,162,42,0.06);
+  border: 1px solid rgba(200,162,42,0.2);
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.6s ease both;
+}
 
-    .btn::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(200,162,42,0.08), transparent);
-      opacity: 0;
-      transition: opacity .25s;
-    }
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 100px;
+  background: linear-gradient(90deg, rgba(200,162,42,0.15), transparent);
+  opacity: 0;
+  transition: opacity .3s;
+}
 
-    .btn:hover {
-      border-color: var(--gold);
-      background: rgba(200,162,42,0.08);
-      transform: translateX(4px);
-    }
+.btn:hover {
+  border-color: var(--gold);
+  background: rgba(200,162,42,0.12);
+  transform: scale(1.02);
+}
 
-    .btn:hover::before { opacity: 1; }
+.btn:hover::after { opacity: 1; }
 
-    .btn .btn-icon {
-      font-size: 18px;
-      opacity: 0.6;
-      transition: opacity .25s, transform .25s;
-    }
+.btn .btn-icon {
+  font-size: 16px;
+  opacity: 0.5;
+  transition: opacity .3s, transform .3s;
+}
 
-    .btn:hover .btn-icon {
-      opacity: 1;
-      transform: translateX(4px);
-    }
+.btn:hover .btn-icon {
+  opacity: 1;
+  transform: translateX(4px);
+}
 
-    .btn-gold {
-      border-color: rgba(200,162,42,0.5);
-      background: linear-gradient(90deg, rgba(200,162,42,0.12), rgba(200,162,42,0.04));
-    }
+.btn-gold {
+  border-color: rgba(200,162,42,0.5);
+  background: linear-gradient(90deg, rgba(200,162,42,0.14), rgba(200,162,42,0.04));
+}
 
-    .btn-gold:hover {
-      border-color: var(--goldf);
-      background: linear-gradient(90deg, rgba(200,162,42,0.2), rgba(200,162,42,0.06));
-    }
+.btn-gold:hover {
+  border-color: var(--goldf);
+  background: linear-gradient(90deg, rgba(200,162,42,0.22), rgba(200,162,42,0.08));
+}
 
-    /* WhatsApp buttons */
-    .btn-wa {
-      border-color: rgba(37,211,102,0.2);
-      background: rgba(37,211,102,0.04);
-    }
+.btn-wa {
+  border-color: rgba(37,211,102,0.2);
+  background: rgba(37,211,102,0.04);
+}
 
-    .btn-wa:hover {
-      border-color: rgba(37,211,102,0.5);
-      background: rgba(37,211,102,0.08);
-      transform: translateX(4px);
-    }
+.btn-wa:hover {
+  border-color: rgba(37,211,102,0.5);
+  background: rgba(37,211,102,0.1);
+  transform: scale(1.02);
+}
 
-    .btn-wa .btn-icon { color: #25D366; opacity: 1; }
+.btn-wa .btn-icon { color: #25D366; opacity: 1; }
 
-    /* staggered animation */
-    .btn:nth-child(1) { animation-delay: 0.2s; }
-    .btn:nth-child(2) { animation-delay: 0.3s; }
-    .btn:nth-child(3) { animation-delay: 0.4s; }
-    .btn:nth-child(4) { animation-delay: 0.5s; }
-    .btn:nth-child(5) { animation-delay: 0.6s; }
-    .btn:nth-child(6) { animation-delay: 0.7s; }
-
-    /* ── FOOTER ── */
+.btn:nth-child(1) { animation-delay: 0.2s; }
+.btn:nth-child(2) { animation-delay: 0.3s; }
+.btn:nth-child(3) { animation-delay: 0.4s; }
+.btn:nth-child(4) { animation-delay: 0.5s; }
+.btn:nth-child(5) { animation-delay: 0.6s; }
+.btn:nth-child(6) { animation-delay: 0.7s; }
     .footer {
       text-align: center;
       margin-top: 48px;
