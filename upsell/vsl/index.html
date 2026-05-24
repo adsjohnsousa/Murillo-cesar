@@ -46,7 +46,7 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 .topo-tag{font-size:11px;color:var(--gray2);letter-spacing:.1em;text-transform:uppercase}
 
 /* ── BADGE COMPRA CONFIRMADA ── */
-#confirmacao{background:linear-gradient(135deg,rgba(22,163,74,.12),rgba(22,163,74,.04));border:1px solid rgba(74,222,128,.2);padding:18px 0;text-align:center}
+#confirmacao{background:linear-gradient(135deg,rgba(22,163,74,.12),rgba(22,163,74,.04));border:1px solid rgba(74,222,128,.2);padding:12px 0;text-align:center}
 .conf-inner{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
 .conf-icon{width:32px;height:32px;border-radius:50%;background:rgba(22,163,74,.2);border:1.5px solid rgba(74,222,128,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .conf-icon svg{width:16px;height:16px}
@@ -54,7 +54,7 @@ body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);
 .conf-sub{font-size:12px;color:var(--gray2);letter-spacing:.04em}
 
 /* ── HERO ── */
-#hero{padding:28px 0 20px;text-align:center;position:relative;overflow:hidden;background:var(--black)}
+#hero{padding:16px 0 12px;text-align:center;position:relative;overflow:hidden;background:var(--black)}
 #hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 30%,rgba(200,162,42,.06),transparent 70%)}
 .hero-hex{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 0L56 16v48L28 80 0 64V16Z' fill='none' stroke='rgba(200,162,42,0.03)' stroke-width='1'/%3E%3C/svg%3E")}
 .hero-inner{position:relative;z-index:2}
@@ -186,6 +186,15 @@ footer{background:var(--dark2);border-top:.5px solid rgba(200,162,42,.1);padding
   .comp-grid{grid-template-columns:1fr}
   .gar-box{flex-direction:column;text-align:center}
   .pq-grid{grid-template-columns:1fr}
+  #urgencia{padding:7px 0}
+  .urg-text{font-size:11px}
+  #topo{padding:10px 0}
+  #hero{padding:10px 0 8px}
+  .hero-wait{font-size:13px;margin-bottom:4px}
+  .hero-h1{font-size:clamp(30px,8vw,44px);margin-bottom:4px}
+  .hero-h2{font-size:clamp(28px,7.5vw,40px);margin-bottom:10px}
+  .hero-hint{font-size:12px;margin-bottom:14px}
+  #vsl{padding:0 0 32px}
 }
 </style>
 </head>
@@ -275,7 +284,7 @@ footer{background:var(--dark2);border-top:.5px solid rgba(200,162,42,.1);padding
         <div class="comp-label right-lbl">V.I.S.T.A. + Português do Zero à Aprovação</div>
         <div class="comp-item right-item"><div class="comp-icon-ok"><svg viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 5,9.5 10.5,2.5" stroke="#C8A22A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Lê com precisão <em>e</em> domina toda a estrutura da língua</span></div>
         <div class="comp-item right-item"><div class="comp-icon-ok"><svg viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 5,9.5 10.5,2.5" stroke="#C8A22A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Pontuação máxima em interpretação e gramática</span></div>
-        <div class="comp-item right-item"><div class="comp-icon-ok"><svg viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 5,9.5 10.5,2.5" stroke="#C8A22A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Português completo do zero para qualquer banca</span></div>
+        <div class="comp-item right-item"><div class="comp-icon-ok"><svg viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 5,9.5 10.5,2.5" stroke="#C8A22A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Português completo para qualquer banca</span></div>
         <div class="comp-item right-item"><div class="comp-icon-ok"><svg viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 5,9.5 10.5,2.5" stroke="#C8A22A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Aprovação com consistência, sem lacunas</span></div>
       </div>
     </div>
@@ -377,7 +386,7 @@ footer{background:var(--dark2);border-top:.5px solid rgba(200,162,42,.1);padding
       <div class="pq-card">
         <div class="pq-card-label">✓ Você vai se identificar</div>
         <div class="pq-item"><div class="pq-dot"></div><span>Estuda para concurso e português ainda te trava</span></div>
-        <div class="pq-item"><div class="pq-dot"></div><span>Acerta interpretação mas erra gramática</span></div>
+        <div class="pq-item"><div class="pq-dot"></div><span>Acerta interpretação, mas erra gramática</span></div>
         <div class="pq-item"><div class="pq-dot"></div><span>Quer dominar português do início ao fim</span></div>
         <div class="pq-item"><div class="pq-dot"></div><span>Prepara para CESPE, FCC, VUNESP ou FGV</span></div>
         <div class="pq-item"><div class="pq-dot"></div><span>Quer fechar português de vez e focar em outras disciplinas</span></div>
